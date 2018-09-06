@@ -15,21 +15,21 @@ namespace M120Projekt
         {
             Debug.Print("--- DemoACreate ---");
             // KlasseA (lange Syntax)
-            Data.Modell klasseA1 = new Data.Modell();
-            klasseA1.Name = "Artikel 1";
-            klasseA1.Jahrgang = DateTime.Today;
-            klasseA1.Marke = Data.Marke.LesenAttributWie("Artikelgruppe 1").FirstOrDefault();
-            klasseA1.Bauart = "SuperSport";
-            klasseA1.Leistung = 157;
-            klasseA1.Drehmoment = 124;
-            klasseA1.Hubraum = 1103;
-            klasseA1.Höchstgeschwindigkeit = 300;
-            klasseA1.MotorBauart = "V4";
-            klasseA1.Gewicht = 164;
-            klasseA1.Aktiv = true;
-            klasseA1.MarkeId = 1;
-            Int64 KlasseAId = klasseA1.Erstellen();
-            Debug.Print("Artikel erstellt mit Id:" + KlasseAId);
+            Data.Modell modell = new Data.Modell();
+            modell.Name = "Artikel 1";
+            modell.Jahrgang = DateTime.Today;
+            modell.Bauart = "SuperSport";
+            modell.Leistung = 157;
+            modell.Drehmoment = 124;
+            modell.Hubraum = 1103;
+            modell.Höchstgeschwindigkeit = 300;
+            modell.MotorBauart = "V4";
+            modell.Gewicht = 164;
+            modell.Aktiv = true;
+            modell.MarkeId = 1;
+            modell.Marke = Data.Marke.LesenAttributWie("Artikelgruppe 1").FirstOrDefault();
+            Int64 modellId = modell.Erstellen();
+            Debug.Print("Artikel erstellt mit Id:" + modellId);
         }
         // Read
         public static void DemoARead()
@@ -96,7 +96,7 @@ namespace M120Projekt
             Data.Marke klasseB = Data.Marke.LesenAttributGleich("Artikelgruppe 1").FirstOrDefault();
             Debug.Print("Auslesen einzelne Gruppe mit Name: " + klasseB.Name + " Datum" + klasseB.Gruendungsjahr.ToString("dd.MM.yyyy"));
             // Liste auslesen
-            foreach(Data.Modell klasseA in klasseB.FremdListeAttribut)
+            foreach(Data.Modell klasseA in klasseB.Modelle)
             {
                 Debug.Print("Artikelgruppe: " + klasseB.Name + " enthält Artikel:" + klasseA.Name);
             }

@@ -23,7 +23,7 @@ namespace M120Projekt.Data
         public Int32 Mitarbeiterzahl { get; set; }
         public Int32 Umsatz { get; set; }
         public Int32 Modellanzahl { get; set; }
-        public ICollection<Modell> FremdListeAttribut { get; set; }
+        public ICollection<Modell> Modelle { get; set; }
         #endregion
         #region Applikationsschicht
         public Marke() { }
@@ -39,21 +39,21 @@ namespace M120Projekt.Data
         {
             using (var context = new Data.Context())
             {
-                return (from record in context.Marke.Include(x => x.FremdListeAttribut) select record).ToList();
+                return (from record in context.Marke.Include(x => x.Modelle) select record).ToList();
             }
         }
         public static Data.Marke LesenID(Int64 MarkeId)
         {
             using (var context = new Data.Context())
             {
-                return (from record in context.Marke.Include(x => x.FremdListeAttribut) where record.MarkeId == MarkeId select record).FirstOrDefault();
+                return (from record in context.Marke.Include(x => x.Modelle) where record.MarkeId == MarkeId select record).FirstOrDefault();
             }
         }
         public static List<Data.Marke> LesenAttributGleich(String suchbegriff)
         {
             using (var context = new Data.Context())
             {
-                var Markequery = (from record in context.Marke.Include(x => x.FremdListeAttribut) where record.Name == suchbegriff select record).ToList();
+                var Markequery = (from record in context.Marke.Include(x => x.Modelle) where record.Name == suchbegriff select record).ToList();
                 return Markequery;
             }
         }
@@ -61,7 +61,7 @@ namespace M120Projekt.Data
         {
             using (var context = new Data.Context())
             {
-                return (from record in context.Marke.Include(x => x.FremdListeAttribut) where record.Name.Contains(suchbegriff) select record).ToList();
+                return (from record in context.Marke.Include(x => x.Modelle) where record.Name.Contains(suchbegriff) select record).ToList();
             }
         }
         public Int64 Erstellen()
