@@ -56,3 +56,7 @@ C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\M120Proje
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\M120Projekt.csproj.GenerateResource.Cache
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\M120Projekt.exe
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\M120Projekt.pdb
+C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\ModellDetail.g.cs
+C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\ModellForm.g.cs
+C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\ModellDetail.baml
+C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\ModellForm.baml

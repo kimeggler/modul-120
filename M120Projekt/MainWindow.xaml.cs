@@ -25,15 +25,21 @@ namespace M120Projekt
         {
             InitializeComponent();
             // Aufruf diverse APIDemo Methoden
-            APIDemo.DemoBCreate();
-            APIDemo.DemoACreate();
-            APIDemo.DemoARead();
-            APIDemo.DemoBRead();
-            APIDemo.DemoAUpdate();
-            APIDemo.DemoARead();
-            APIDemo.DemoBRead();
+            //APIDemo.DemoBCreate();
+            //APIDemo.DemoACreate();
+            //APIDemo.DemoARead();
+            //APIDemo.DemoBRead();
+            //APIDemo.DemoAUpdate();
+            //APIDemo.DemoARead();
+            //APIDemo.DemoBRead();
             //APIDemo.DemoADelete();
-            APIDemo.DemoBRead();
+            //APIDemo.DemoBRead();
+        }
+
+        private void OpenModel(object sender, EventArgs e)
+        {
+            ModellDetail detail = new ModellDetail();
+            detail.Show();
         }
     }
 }
