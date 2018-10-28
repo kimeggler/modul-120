@@ -29,7 +29,11 @@ namespace M120Projekt
         }
         private void Cancel(object sender, EventArgs e)
         {
-            MessageBox.Show("Alle Änderungen gehen verloren", null, MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            MessageBoxResult dialogResult = MessageBox.Show("Alle Änderungen gehen verloren", null, MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            if (dialogResult == MessageBoxResult.OK)
+            {
+                Close();
+            }
         }
     }
 }

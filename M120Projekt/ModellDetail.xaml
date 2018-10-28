@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="ModellDetail" Height="500" Width="400">
+        Title="ModellDetail" Height="500" Width="400" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Label Content="Modell" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="V4S" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Grid Margin="50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -27,40 +27,37 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
-                <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="V4S" />
 
-            <Label Grid.Column="0" Grid.Row="1" Content="Marke" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="Ducati" />
+            <Label Grid.Column="0" Grid.Row="0" Content="Marke" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="Ducati" />
 
-            <Label Grid.Column="0" Grid.Row="2" Content="Jahrgang" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="2018" />
+            <Label Grid.Column="0" Grid.Row="1" Content="Jahrgang" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="2018" />
 
-            <Label Grid.Column="0" Grid.Row="3" Content="Bauart" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="SuperSport" />
+            <Label Grid.Column="0" Grid.Row="2" Content="Bauart" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="SuperSport" />
 
-            <Label Grid.Column="0" Grid.Row="4" Content="Leistung in PS" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="250" />
+            <Label Grid.Column="0" Grid.Row="3" Content="Leistung in PS" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="250" />
 
-            <Label Grid.Column="0" Grid.Row="5" Content="Drehmoment in Nm" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="180" />
+            <Label Grid.Column="0" Grid.Row="4" Content="Drehmoment in Nm" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="180" />
 
-            <Label Grid.Column="0" Grid.Row="6" Content="Hubraum in cm" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="1199" />
+            <Label Grid.Column="0" Grid.Row="5" Content="Hubraum in cm" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="1199" />
 
-            <Label Grid.Column="0" Grid.Row="7" Content="Höchstgeschwindigkeit" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="300" />
+            <Label Grid.Column="0" Grid.Row="6" Content="Höchstgeschwindigkeit" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="300" />
 
-            <Label Grid.Column="0" Grid.Row="8" Content="Motor-Bauart" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="V4" />
+            <Label Grid.Column="0" Grid.Row="7" Content="Motor-Bauart" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="V4" />
 
-            <Label Grid.Column="0" Grid.Row="9" Content="Gewicht in kg" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="230" />
+            <Label Grid.Column="0" Grid.Row="8" Content="Gewicht in kg" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="230" />
 
-            <Label Grid.Column="0" Grid.Row="10" Content="Aktiv" HorizontalAlignment="Left" VerticalAlignment="Top" />
-            <Label Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="Ja" />
+            <Label Grid.Column="0" Grid.Row="9" Content="Aktiv" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="Ja" />
         </Grid>
         <Grid Height="50" VerticalAlignment="Bottom">
             <Grid.ColumnDefinitions>
@@ -71,9 +68,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="0" Margin="20, 10" Content="New" Click="CreateNewModel"/>
-            <Button Grid.Column="1" Margin="20, 10" Content="Update" Click="UpdateModel" />
-            <Button Grid.Column="2" Margin="20, 10" Content="Delete" Click="DeleteModel" />
+            <Button Grid.Column="0" Margin="20, 10" Content="New" Click="CreateNewModel" FontWeight="Bold"/>
+            <Button Grid.Column="1" Margin="20, 10" Content="Update" Click="UpdateModel" FontWeight="Bold"/>
+            <Button Grid.Column="2" Margin="20, 10" Content="Delete" Click="DeleteModel" FontWeight="Bold"/>
         </Grid>
     </Grid>
 </Window>
