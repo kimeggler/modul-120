@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resx="clr-namespace:M120Projekt.Resources"
              xmlns:local="clr-namespace:M120Projekt"
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="500">
@@ -14,11 +15,11 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button x:Name="back" Grid.Column="0">Zurück</Button>
-        <Button x:Name="newbutton" Grid.Column="1">Neu</Button>
-        <Button x:Name="save" Grid.Column="2">Speichern</Button>
-        <Button x:Name="editButton" Grid.Column="3">Bearbeiten</Button>
-        <Button x:Name="delete" Grid.Column="4">Löschen</Button>
+        <Button x:Name="back" Grid.Column="0" Content="{x:Static resx:strings.zurueck}"></Button>
+        <Button x:Name="newbutton" Grid.Column="1" Content="{x:Static resx:strings.neu}"></Button>
+        <Button x:Name="save" Grid.Column="2" Content="{x:Static resx:strings.speichern}"></Button>
+        <Button x:Name="editButton" Grid.Column="3" Content="{x:Static resx:strings.bearbeiten}"></Button>
+        <Button x:Name="delete" Grid.Column="4" Content="{x:Static resx:strings.loeschen}"></Button>
 
     </Grid>
 </UserControl>

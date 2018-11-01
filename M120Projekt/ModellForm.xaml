@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:resx="clr-namespace:M120Projekt.Resources"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d" Height="472.5" Width="410">
     <Grid>
@@ -28,10 +29,10 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static resx:strings.name}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="name" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" />
 
-            <Label Grid.Column="0" Grid.Row="1" Content="Marke" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static resx:strings.marke}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <ComboBox x:Name="marke" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Height="22"  Margin="10, 0" VerticalAlignment="Stretch" SelectionChanged="textChanged" >
                 <ComboBoxItem>
                     <TextBlock Text="Marke" />
@@ -41,31 +42,31 @@
                 </ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="2" Content="Jahrgang" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="{x:Static resx:strings.jahrgang}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="jahrgang" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="3" Content="Bauart" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static resx:strings.bauart}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="bauart" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="4" Content="Leistung in PS" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="4" Content="{x:Static resx:strings.leistung}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="leistung" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="5" Content="Drehmoment in Nm" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="5" Content="{x:Static resx:strings.drehmoment}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="drehmoment" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="6" Content="Hubraum in cm" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="6" Content="{x:Static resx:strings.hubraum}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="hubraum" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="7" Content="Höchstgeschwindigkeit" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="7" Content="{x:Static resx:strings.hoechstgeschwindigkeit}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="hoechstgeschwindigkeit" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="8" Content="Motor-Bauart" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="8" Content="{x:Static resx:strings.motor}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="motor" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="9" Content="Gewicht in kg" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="9" Content="{x:Static resx:strings.gewicht}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="gewicht" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Height="22" TextWrapping="Wrap" Text="" Margin="10, 0" VerticalAlignment="Stretch" TextChanged="textChanged" />
 
-            <Label Grid.Column="0" Grid.Row="10" Content="Aktiv" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="10" Content="{x:Static resx:strings.aktiv}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <CheckBox x:Name="aktiv" Grid.Column="1" Grid.Row="10" Margin="10, 0" VerticalAlignment="Center" />
         </Grid>
         <Grid Height="50" VerticalAlignment="Bottom">
@@ -76,8 +77,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="save" Grid.Column="0" Margin="20, 10" Content="Save" IsEnabled="False" Click="SaveModel" FontWeight="Bold"/>
-            <Button x:Name="cancel" Grid.Column="1" Margin="20, 10" Content="Cancel" Click="Cancel" FontWeight="Bold"/>
+            <Button x:Name="save" Grid.Column="0" Margin="20, 10" Content="{x:Static resx:strings.speichern}" IsEnabled="False" Click="SaveModel" FontWeight="Bold"/>
+            <Button x:Name="cancel" Grid.Column="1" Margin="20, 10" Content="{x:Static resx:strings.abbrechen}" Click="Cancel" FontWeight="Bold"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:resx="clr-namespace:M120Projekt.Resources"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d" Height="500" Width="400">
     <Grid>
@@ -28,34 +29,34 @@
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Content="Marke" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static resx:strings.marke}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="Ducati" />
 
-            <Label Grid.Column="0" Grid.Row="1" Content="Jahrgang" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static resx:strings.jahrgang}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="2018" />
 
-            <Label Grid.Column="0" Grid.Row="2" Content="Bauart" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="{x:Static resx:strings.bauart}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="SuperSport" />
 
-            <Label Grid.Column="0" Grid.Row="3" Content="Leistung in PS" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static resx:strings.leistung}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="250" />
 
-            <Label Grid.Column="0" Grid.Row="4" Content="Drehmoment in Nm" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="4" Content="{x:Static resx:strings.drehmoment}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="180" />
 
-            <Label Grid.Column="0" Grid.Row="5" Content="Hubraum in cm" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="5" Content="{x:Static resx:strings.hubraum}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="1199" />
 
-            <Label Grid.Column="0" Grid.Row="6" Content="Höchstgeschwindigkeit" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="6" Content="{x:Static resx:strings.hoechstgeschwindigkeit}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="300" />
 
-            <Label Grid.Column="0" Grid.Row="7" Content="Motor-Bauart" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="7" Content="{x:Static resx:strings.motor}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="V4" />
 
-            <Label Grid.Column="0" Grid.Row="8" Content="Gewicht in kg" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="8" Content="{x:Static resx:strings.gewicht}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="230" />
 
-            <Label Grid.Column="0" Grid.Row="9" Content="Aktiv" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Grid.Column="0" Grid.Row="9" Content="{x:Static resx:strings.aktiv}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="10, 0" VerticalAlignment="Top" Content="Ja" />
         </Grid>
         <Grid Height="50" VerticalAlignment="Bottom">
@@ -67,9 +68,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="0" Margin="20, 10" Content="New" Click="CreateNewModel" FontWeight="Bold"/>
-            <Button Grid.Column="1" Margin="20, 10" Content="Update" Click="UpdateModel" FontWeight="Bold"/>
-            <Button Grid.Column="2" Margin="20, 10" Content="Delete" Click="DeleteModel" FontWeight="Bold"/>
+            <Button Grid.Column="0" Margin="20, 10" Content="{x:Static resx:strings.neu}" Click="CreateNewModel" FontWeight="Bold"/>
+            <Button Grid.Column="1" Margin="20, 10" Content="{x:Static resx:strings.bearbeiten}" Click="UpdateModel" FontWeight="Bold"/>
+            <Button Grid.Column="2" Margin="20, 10" Content="{x:Static resx:strings.loeschen}" Click="DeleteModel" FontWeight="Bold"/>
         </Grid>
     </Grid>
 </UserControl>

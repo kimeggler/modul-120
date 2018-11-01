@@ -64,6 +64,11 @@
     <Compile Include="MarkenAnsicht.xaml.cs">
       <DependentUpon>MarkenAnsicht.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="TopDownNavigation.xaml.cs">
       <DependentUpon>TopDownNavigation.xaml</DependentUpon>
     </Compile>
@@ -124,6 +129,10 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Data\Klassendiagramm.cd" />
     <None Include="packages.config" />

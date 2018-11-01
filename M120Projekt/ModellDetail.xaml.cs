@@ -36,7 +36,14 @@ namespace M120Projekt
         }
         private void DeleteModel(object sender, EventArgs e)
         {
-            MessageBox.Show("This would delete the model!", null, MessageBoxButton.YesNo, MessageBoxImage.Stop);
+            if (MessageBox.Show("This would delete the model!", null, MessageBoxButton.YesNo, MessageBoxImage.Stop) == MessageBoxResult.Yes)
+            {
+                mainwindow.setZustand(MainWindow.Zustand.MarkenAnsicht.ToString());
+            }
+            else {
+                return;
+            }
+            
         }
     }
 }

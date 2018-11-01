@@ -65,3 +65,4 @@ C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\TopDownNa
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\TopDownNavigation.baml
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\MarkenAnsicht.g.cs
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\MarkenAnsicht.baml
+C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\obj\Debug\M120Projekt.Resources.strings.resources
