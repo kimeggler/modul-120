@@ -17,21 +17,22 @@ namespace M120Projekt
     /// <summary>
     /// Interaktionslogik für ModellDetail.xaml
     /// </summary>
-    public partial class ModellDetail : Window
+    public partial class ModellDetail : UserControl
     {
-        public ModellDetail()
+        private MainWindow mainwindow;
+        public ModellDetail(MainWindow parent)
         {
             InitializeComponent();
+            mainwindow = parent;
         }
         private void CreateNewModel(object sender, EventArgs e)
         {
-            ModellForm modelform = new ModellForm();
-            modelform.Show();
+            //ModellForm modelform = new ModellForm();
+            //modelform.Show();
         }
         private void UpdateModel(object sender, EventArgs e)
         {
-            ModellForm modelform = new ModellForm();
-            modelform.Show();
+            mainwindow.setZustand(MainWindow.Zustand.BearbeitungsAnsicht.ToString());
         }
         private void DeleteModel(object sender, EventArgs e)
         {

@@ -21,6 +21,11 @@ namespace M120Projekt
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private ModellDetail modeldetail;
+        private TopDownNavigation topdownnav;
+        private MarkenAnsicht markenansicht;
+        private ModellForm modelform;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,12 +39,85 @@ namespace M120Projekt
             //APIDemo.DemoBRead();
             //APIDemo.DemoADelete();
             //APIDemo.DemoBRead();
+
+            topdownnav = new TopDownNavigation(this);
+            modeldetail = new ModellDetail(this);
+            markenansicht = new MarkenAnsicht(this);
+            modelform = new ModellForm(this);
+
+            topdown.Children.Add(topdownnav);
+
+            renderView();
+            renderTopDownNav();
         }
 
-        private void OpenModel(object sender, EventArgs e)
+        public enum Zustand
         {
-            ModellDetail detail = new ModellDetail();
-            detail.Show();
+            Listenansicht,
+            MarkenAnsicht,
+            DetailAnsicht,
+            BearbeitungsAnsicht,
+            Gespeichert,
+        }
+        private string activeZustand = Zustand.MarkenAnsicht.ToString();
+
+        public string getZustand()
+        {
+            return activeZustand;
+        }
+
+        public void setZustand(string zustand)
+        {
+            activeZustand = zustand;
+            renderTopDownNav();
+            renderView();
+        }
+
+        private void neu_click(object sender, EventArgs e)
+        {
+            return;
+        }
+
+        private void renderTopDownNav()
+        {
+            string activeZustand = getZustand();
+            if (activeZustand == "Listenansicht")
+            {
+                topdownnav.list();
+            }
+            else if (activeZustand == "MarkenAnsicht")
+            {
+                topdownnav.marke();
+            }
+            else if (activeZustand == "DetailAnsicht")
+            {
+                topdownnav.detail();
+            }
+            else if (activeZustand == "BearbeitungsAnsicht")
+            {
+                topdownnav.edit();
+            }
+        }
+
+        private void renderView()
+        {
+            string activeZustand = getZustand();
+            if (activeZustand == "Listenansicht")
+            {
+                platzhalter.Content = modeldetail;
+            }
+            else if (activeZustand == "MarkenAnsicht")
+            {
+                platzhalter.Content = markenansicht;
+            }
+            else if (activeZustand == "DetailAnsicht")
+            {
+                platzhalter.Content = modeldetail;
+            }
+            else if (activeZustand == "BearbeitungsAnsicht")
+            {
+                platzhalter.Content = modelform;
+            }
         }
     }
 }

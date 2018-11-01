@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vmadmin\Documents\120\repos\M120Projekt\M120Projekt\App.xaml
-3-129987533
+5-1232767909
 
-16-1337827744
+18872413226
 161858073836
-MainWindow.xaml;ModellDetail.xaml;ModellForm.xaml;
+MainWindow.xaml;MarkenAnsicht.xaml;ModellDetail.xaml;ModellForm.xaml;TopDownNavigation.xaml;
 
-True
+False
 

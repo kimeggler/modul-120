@@ -18,21 +18,20 @@ namespace M120Projekt
     /// <summary>
     /// Interaktionslogik für ModellForm.xaml
     /// </summary>
-    public partial class ModellForm : Window
+    public partial class ModellForm : UserControl
     {
-        enum Zustand
+        enum localState
         {
-            Unvollständig,
             Unveraendert,
-            Ungespeichert,
-            Gespeichert
+            Ungespeichert
         }
+        private String localstate = localState.Unveraendert.ToString();
 
-        private Zustand zustand = Zustand.Unveraendert;
-
-        public ModellForm()
+        private MainWindow mainwindow;
+        public ModellForm(MainWindow parent)
         {
             InitializeComponent();
+            mainwindow = parent;
         }
         private void SaveModel(object sender, EventArgs e)
         {
@@ -44,7 +43,6 @@ namespace M120Projekt
             bool leistungValid = checkIfValidInput(leistung, "^([0-9]+)$");
             if( jahrgangValid && gewichtValid && hoechstgeschwindigkeitValid && hubraumValid && drehmomentValid && leistungValid )
             {
-                zustand = Zustand.Gespeichert;
                 MessageBox.Show("This would save the model!", null, MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
@@ -52,32 +50,44 @@ namespace M120Projekt
                 return;
             }
         }
+        private void ClearForm()
+        {
+            name.Text = "";
+            marke.SelectedItem = null;
+            jahrgang.Text = "";
+            bauart.Text = "";
+            motor.Text = "";
+            gewicht.Text = "";
+            hoechstgeschwindigkeit.Text = "";
+            hubraum.Text = "";
+            drehmoment.Text = "";
+            leistung.Text = "";
+        }
         private void Cancel(object sender, EventArgs e)
         {
             checkCurrentZustand((Button)sender);
         }
         private void textChanged(object sender, EventArgs e)
         {
-            if(this.IsLoaded)
-            {
-                zustand = Zustand.Ungespeichert;
-                checkIfComplete();
-            }
+            checkIfComplete();
+
         }
         private void checkCurrentZustand(Button sender)
         {
             if (sender.Name == "cancel")
             {
-                if (zustand == Zustand.Unveraendert)
+                if (localstate == localState.Unveraendert.ToString())
                 {
-                    Close();
+                    ClearForm();
+                    mainwindow.setZustand(MainWindow.Zustand.DetailAnsicht.ToString());
                 }
-                else if (zustand == Zustand.Ungespeichert)
+                else if (localstate == localState.Ungespeichert.ToString())
                 {
                     MessageBoxResult dialogResult = MessageBox.Show("Alle Änderungen gehen verloren", null, MessageBoxButton.OKCancel, MessageBoxImage.Warning);
                     if (dialogResult == MessageBoxResult.OK)
                     {
-                        Close();
+                        ClearForm();
+                        mainwindow.setZustand(MainWindow.Zustand.DetailAnsicht.ToString());
                     }
                 }
             }

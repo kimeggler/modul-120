@@ -1,11 +1,10 @@
-﻿<Window x:Class="M120Projekt.ModellDetail"
+﻿<UserControl x:Class="M120Projekt.ModellDetail"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
-        mc:Ignorable="d"
-        Title="ModellDetail" Height="500" Width="400" ResizeMode="NoResize">
+        mc:Ignorable="d" Height="500" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -73,4 +72,4 @@
             <Button Grid.Column="2" Margin="20, 10" Content="Delete" Click="DeleteModel" FontWeight="Bold"/>
         </Grid>
     </Grid>
-</Window>
+</UserControl>
